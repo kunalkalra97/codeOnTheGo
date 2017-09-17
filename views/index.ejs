@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kastie</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Kastie</h1>
+    <p>Upload and share code</p>
+    <form method="POST" action="/saveFile">
+      <label for="code">Enter your code here</label><br><br><br>
+      <textarea name="code"></textarea><br><br>
+      <input type="submit">
+    </form>
+
+    <p id="pathToFile"></p>
+  </body>
+
+    <script type="text/javascript" src="/javascripts/jQuery.js"></script>
+    <script type="text/javascript" src="/javascripts/script.js"></script>
+</html>

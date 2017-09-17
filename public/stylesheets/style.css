@@ -1,0 +1,32 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+p,h1 {
+  text-align: center;
+}
+
+label {
+  font-size: 20px;
+}
+
+textarea {
+  width: 80%;
+  margin-left: 10%;
+  height: 60vh;
+  font-family: "Lucida Grande", Helvetica;
+  font-size: 18px;
+  overflow: scroll;
+}
+
+input[type="submit"] {
+
+  width: 10%;
+  margin-left: 45%;
+  font-size: 44px;
+}
