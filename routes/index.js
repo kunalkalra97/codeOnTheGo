@@ -43,7 +43,7 @@ router.post('/saveFile', function(req, res, next) {
   fs.writeFile(fileNameWithDirectory, fileText, 'utf-8', function (err) {
   	
   	if(err) throw err;
-  	res.render('displayTagname', {"tagName":fileTag});
+  	res.render('displayTagName', {"tagName":fileTag});
 
   });
   
