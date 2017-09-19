@@ -13,26 +13,25 @@ function generateRandomTag() {
   return tag;
 }
 
-router.get('/*', function(req, res, next) {
-  
-  if(req.path.length == 1) {
-    res.render('index');
-    return;
-  }
 
-  var fileTag = req.path.slice(1, req.path.length);
-  var fileNameWithDirectory = './files/'+fileTag+'.txt';
+router.get('/', function(req, res, next) {
+  res.render('index');
+});
 
-  fs.readFile(fileNameWithDirectory, 'utf-8', function(err, data) {
 
-  	if(err) throw err;
+router.get('/files/:path', function (req, res, next) {
+    
 
-  	var code = data.toString('utf-8');
-  	
-  	res.end(code);
 
-  });
+    var fileTag = req.params.path;
+    var fileNameWithDirectory = './files/'+fileTag+'.txt';
 
+    fs.readFile(fileNameWithDirectory, 'utf-8', function(err, data) {
+
+      if(err) throw err;
+       var code = data.toString('utf-8');
+       res.end(code);
+    });   
 });
 
 router.post('/saveFile', function(req, res, next) {
